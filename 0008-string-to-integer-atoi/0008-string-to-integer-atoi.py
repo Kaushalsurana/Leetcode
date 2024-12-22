@@ -1,27 +1,30 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
-        k=0
+        sign=1
+        a=0
         for i in s:
-            if i==" ":
-                k+=1
-            else:
+            if i!=" ":
                 break
-        sign = 1
+            a+=1
         n=len(s)
-        if k < n and s[k] == '-':
-            sign = -1
-            k += 1
-        elif k < n and s[k] == '+':
-            k += 1
+        if a<n:
+            if s[a]=='-':
+                sign=-1
+                a+=1
+            elif s[a]=='+':
+                sign=1
+                a+=1
         res=0
-        INT_MAX, INT_MIN = 2**31 - 1, -2**31
-        while k<n and s[k].isdigit():
-            y=int(s[k])
-            if res>(INT_MAX -y)//10:
+        INT_MAX=2**31-1
+        INT_MIN=-2**31
+        while a<n and s[a].isdigit():
+            b=int(s[a])
+            if res>(INT_MAX-b)//10:
                 return INT_MAX if sign==1 else INT_MIN
-            res=res*10+y
-            k+=1
+            res=res*10+b
+            a+=1
         return sign*res
+        
         
 
                 
