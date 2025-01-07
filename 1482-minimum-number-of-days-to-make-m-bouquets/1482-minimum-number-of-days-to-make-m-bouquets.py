@@ -1,29 +1,24 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        def bouq(mid):
-            flower=0
-            bou=0
+        def au(bloomDay,day,m,k):
+            a=0
+            res=0
             for i in bloomDay:
-                if i<=mid:
-                    flower+=1
-                    if flower==k:
-                        bou+=1
-                        flower=0
+                if day>=i:
+                    a+=1
                 else:
-                    flower=0
-                if bou>=m:
-                    return True
-            return bou>=m
-
+                    res+=a//k
+                    a=0
+            res+=a//k
+            return res>=m
         if m*k>len(bloomDay):
             return -1
-        low,high=min(bloomDay),max(bloomDay)
-        while low<high:
-            mid=(low+high)//2
-            if bouq(mid):
-                high=mid
+        mi=min(bloomDay)
+        ma=max(bloomDay)
+        while mi<=ma:
+            mid=(mi+ma)//2
+            if au(bloomDay,mid,m,k):
+                ma=mid-1
             else:
-                low=mid+1
-        return low
-
-        
+                mi=mid+1
+        return mi
