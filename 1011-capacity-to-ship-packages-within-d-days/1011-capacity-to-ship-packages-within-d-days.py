@@ -10,10 +10,13 @@ class Solution:
                 else:
                     y+=we[i]
             return day
-
-        high,low=sum(weights),max(weights)
+        q=sum(weights)
+        high,low=q,max(weights)
         while low<=high:
             mid=(low+high)//2
+            if q/mid>days:
+                low=mid+1
+                continue
             da=k(weights,mid)
             if da<=days:
                 high=mid-1
