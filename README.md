@@ -26,3 +26,19 @@ Feel free to explore the solutions in this repository or use them as a reference
 ## Contribution
 
 I welcome contributions to this repository! If you have a different approach to solving a problem or want to improve an existing solution, feel free to submit a pull request.
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Kaushalsurana/Leetcode/tree/main/0073-set-matrix-zeroes/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Kaushalsurana/Leetcode/tree/main/0073-set-matrix-zeroes/) | Medium |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Kaushalsurana/Leetcode/tree/main/0073-set-matrix-zeroes/) | Medium |
+<!---LeetCode Topics End-->
